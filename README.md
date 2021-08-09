@@ -4,7 +4,7 @@ Automating and Optimizing manager's task of allotting and planning schedule/time
 #Problem Statement
 The task is to attempt finding a way that could automate your (Service Manager's) manual work of creating a plan for Technicians. Also, the solution should consider how to handle the scenarios of callouts and emergencies.
 
-#Solution
+## Solution
 Automating the given task can be divided into two following steps:
 1. Firstly assigning which technician will visit which customers and how many (say for a particular day)
 2. Then the next job is to choose the most optimal route taken by the technician to minimize cost.
@@ -13,13 +13,13 @@ Automating the given task can be divided into two following steps:
  
 I am using Google OR tools to perform the above tasks.
 
-#Data Used
+## Data Used
 I have used the sample data provided for <a href="https://drive.google.com/file/d/1nGQHCBZ7U3QKyr0X8jnpekZiVrtMIwhV/view">Mainteny Elevator services</a>
 This data consits of customer details and the last visit made. The latest last visit date is what we need to use to plan for next month. 
 On performing initial analysis on the given data, we observe that the number of cutomers visited in latest last month are 100. 
 Let us assume that we have to visit 12 customers in one day and we have 3 technician available that day. 
 
-#Automating Assignment 
+## Automating Assignment 
 The assignment is easy and can be done randomly when all technician are considered equal and their cost for providing services is same.
 Howwever, this can change depending on their time in the organization. Their cost can vary by either the distance they have to travel to reach the cutomer or by the importance if task they are doing or by experience etc. 
 
@@ -28,11 +28,19 @@ More assumptions:
 each technician has to visit 4 cutomers 
 each technician should travel more or less the same distance
 
-For now, let's tackle how to allot them the cutomers depending on the cost for distances they have to travel.
+For now, let's tackle how to allot them the cutomers in case of emergencies.
 
-In the assignment file, i have first assumed their cost for different distances.
-where 0 - distance between 0-10 km
-1 - distance between 10-20 km
-2 - distance between 20-30 km
-3 - any distance greater than 30km 
+In the assignment file, i have first assumed their cost for different distances and different level of task.
+where 
+0 - distance between 0-10 km and Easy
+2 - distance between 0-10 km and Medium 
+3 - distance between 0-10 km and Hard 
+4 - distance between 10-20 km and Easy
+5 - distance between 10-20 km and Medium 
+6 - distance between 10-20 km and Hard
+7 - distance between 20-30 km and Easy
+8 - distance between 20-30 km and Medium
+9 - distance between 20-30 km and Hard
+
+
 
