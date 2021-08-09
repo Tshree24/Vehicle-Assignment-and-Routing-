@@ -26,7 +26,7 @@ def create_data_model():
         (7, 4),  # 12
         
     ]
-    data['num_vehicles'] = 4
+    data['num_vehicles'] = 3
     data['depot'] = 0
     return data
 
