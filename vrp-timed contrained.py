@@ -12,22 +12,19 @@ def create_data_model():
     data['time_matrix'] = time_mat #from the time_matrix.py doc
     data['time_windows'] = [
         (0, 5),  # depot
-        (7, 12),  # 1
-        (10, 15),  # 2
-        (16, 18),  # 3
-        (10, 13),  # 4
-        (0, 5),  # 5
-        (5, 10),  # 6
-        (0, 4),  # 7
-        (5, 10),  # 8
-        (0, 3),  # 9
-        (10, 16),  # 10
-        (10, 15),  # 11
-        (0, 5),  # 12
-        (5, 10),  # 13
-        (7, 8),  # 14
-        (10, 15),  # 15
-        (11, 15),  # 16
+        (7, 4),  # 1
+        (7, 4),  # 2
+        (7, 4),  # 3
+        (7, 4),  # 4
+        (7, 4),  # 5
+        (7, 4),  # 6
+        (7, 4),  # 7
+        (7, 4),  # 8
+        (7, 4),  # 9
+        (7, 4),  # 10
+        (7, 4),  # 11
+        (7, 4),  # 12
+        
     ]
     data['num_vehicles'] = 4
     data['depot'] = 0
@@ -89,8 +86,8 @@ def main():
     time = 'Time'
     routing.AddDimension(
         transit_callback_index,
-        30,  # allow waiting time
-        30,  # maximum time per vehicle
+        60,  # allow waiting time
+        60,  # maximum time per vehicle
         False,  # Don't force start cumul to zero.
         time)
     time_dimension = routing.GetDimensionOrDie(time)
