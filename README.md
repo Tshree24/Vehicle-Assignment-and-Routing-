@@ -1,7 +1,7 @@
 # Vehicle-Assignment-and-Routing-
 Automating and Optimizing manager's task of allotting and planning schedule/time-table for service providers.
 
-#Problem Statement
+## Problem Statement
 The task is to attempt finding a way that could automate your (Service Manager's) manual work of creating a plan for Technicians. Also, the solution should consider how to handle the scenarios of callouts and emergencies.
 
 ## Solution
@@ -28,19 +28,12 @@ More assumptions:
 each technician has to visit 4 cutomers 
 each technician should travel more or less the same distance
 
-For now, let's tackle how to allot them the cutomers in case of emergencies.
+## Vehicle Routing Problem
+In this task, the technicians have to visit the cutomers in a time constrain. So, we have to add a time window constains for reaching each location and assuming that the job takes 60 min of time. 
+As, the buildings are open between 07.00 am to 04.00 pm, i am assuming that they can visit these places anytime between the given time window.
+For this task, we will need to get a time matrix which will comprise of the duration required to travel between the respective locations. The google distance matrix api provides both distance and time between locations, so we can use time in this case. 
 
-In the assignment file, i have first assumed their cost for different distances and different level of task.
-where 
-0 - distance between 0-10 km and Easy
-2 - distance between 0-10 km and Medium 
-3 - distance between 0-10 km and Hard 
-4 - distance between 10-20 km and Easy
-5 - distance between 10-20 km and Medium 
-6 - distance between 10-20 km and Hard
-7 - distance between 20-30 km and Easy
-8 - distance between 20-30 km and Medium
-9 - distance between 20-30 km and Hard
+The address need to be preprocessed in a certain manner in order to request the api data. 
 
 
 
