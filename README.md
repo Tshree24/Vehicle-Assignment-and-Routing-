@@ -41,6 +41,6 @@ The address need to be preprocessed in a certain manner in order to request the 
 In case of emergencies, the location of each techinician should be compared with that of the customer. We have to the distance between technician and new customer in account. In addition, we also need to consider how many jobs for each technician is left. Considering these two conditions, we can again call the functions in vrp_time-constrained.py on the remaining customers, technicians current location and the new customer. 
 
 # Add ons and limitations 
-Later we can add various other constrains as well. Here i have assummed that each technician is equally skilled and thus can do any task given. But this may not be the case in real situation. In addition, there cost may vary in case on emergencies, so we will have to consider that as well before using the rounting algorithm again on the remaining and new customer to visit. 
+Later we can add various other constrains as well. Here i have assummed that each technician is equally skilled and thus can do any task given. But this may not be the case in real situation. In addition, there cost may vary in case on emergencies, so we will have to consider that as well before using the rounting algorithm again on the remaining and new customer to visit. We may use a assignment algorihm for this. 
 
 
