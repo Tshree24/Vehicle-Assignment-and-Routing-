@@ -35,5 +35,8 @@ For this task, we will need to get a time matrix which will comprise of the dura
 
 The address need to be preprocessed in a certain manner in order to request the api data. 
 
+# Emergency
+In case of emergencies, the location of each techinician should be compared with that of the customer. We have to the distance between technician and new customer in account. In addition, we also need to consider how many jobs for each technician is left. Considering these two conditions, we can again call the functions in vrp_time-constrained.py on the remaining customers, technicians current location and the new customer. 
+
 
 
